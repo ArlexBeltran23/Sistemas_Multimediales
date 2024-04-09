@@ -1,0 +1,64 @@
+<div class="login-container">
+  <div class="logo-container vertical-center">
+    <img src="../../../../assets/index/HARDWARE_STORE-removebg-preview.png" alt="">
+  </div>
+  <div class=" vertical-center text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <img class="mb-4" src="../../../../assets/index/HARDWARE_STORE-removebg-preview.png" width="100">
+          <div *ngIf="ruta == 'login'"> 
+          <h1 class="h3 mb-3 fw-normal">Inicio de sesión</h1>
+          
+          <form>
+            <mat-form-field class="example-form-field" style="width: 100%;">
+              <mat-label>Email</mat-label>
+              <input matInput type="Email" formControlName="Email">
+              <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+              </button> -->
+              <mat-error *ngIf="isInvalidField('Email')">
+                {{ getFieldError("Email") }}
+              </mat-error>
+            </mat-form-field>
+          
+             <mat-form-field class="example-form-field" style="width: 100%;">
+              <mat-label>Contraseña</mat-label>
+              <input matInput type="Password" formControlName="Password">
+              <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+              </button> -->
+              <mat-error *ngIf="isInvalidField('Password')">
+                {{ getFieldError("Password") }}
+              </mat-error>
+            </mat-form-field>
+          </form>
+
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Recuerdame
+              </label>
+            </div>
+            <button mat-stroked-button color="primary" (click)="loguearse()">Iniciar Sesion</button>
+            <button mat-stroked-button color="primary" (click)="rutaChanges('register')">REGISTRARME</button>
+            <br>
+            <mat-progress-bar style="margin-top: 20px;" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+            <p class="mt-3 text-muted">
+              o inicia sesion con tu correo
+            </p>
+            <p class="mb-3 text-muted">
+              <asl-google-signin-button
+              style="z-index: 1"
+              type="standard"
+              size="large"
+              shape="square"
+              theme="filled_black"
+              ></asl-google-signin-button>
+            </p>
+          </div>
+          <app-register *ngIf="ruta == 'register'"></app-register>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

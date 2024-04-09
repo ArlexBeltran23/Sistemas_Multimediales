@@ -1,0 +1,49 @@
+
+@import '../node_modules/@angular/material/theming';
+@include mat-core();
+// Definir el color principal directamente
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-cunPalette: (
+    50 : #f0f7e0,
+    100 : #daebb3,
+    200 : #c2de80,
+    300 : #a9d14d,
+    400 : #96c726,
+    500 : #d56605,
+    600 : #7cb700,
+    700 : #71ae00,
+    800 : #67a600,
+    900 : #549800,
+    A100 : #e0ffc3,
+    A200 : #c6ff90,
+    A400 : #acff5d,
+    A700 : #9fff44,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$my-primary: mat-palette($md-cunPalette, 500);
+$my-accent: mat-palette($md-cunPalette, A100);
+
+
+$my-theme: mat-light-theme($my-primary, $my-accent);
+
+
+@include angular-material-theme($my-theme);

@@ -1,0 +1,45 @@
+<img class="mb-4" src="../../../../assets/index/HARDWARE_STORE-removebg-preview.png" width="100">
+<h1 class="h3 mb-3 fw-normal">Crea tu cuenta</h1>
+
+<form action="form-control"[formGroup]="FormRegister">
+  <mat-form-field class="example-form-field " style="width: 100%;">
+    <mat-label>Nombre</mat-label>
+    <input matInput type="text" formControlName="name"/>
+    <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button> -->
+    <mat-error *ngIf="isInvalidField('name')">
+      {{ getFieldError("name") }}
+    </mat-error>
+  </mat-form-field>
+
+ <mat-form-field class="example-form-field" style="width: 100%;">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email">
+    <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button> -->
+    <mat-error *ngIf="isInvalidField('email')">
+      {{ getFieldError("email") }}
+    </mat-error>
+  </mat-form-field>
+
+   <mat-form-field class="example-form-field" style="width: 100%;">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" formControlName="password">
+    <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button> -->
+    <mat-error *ngIf="isInvalidField('password')">
+      {{ getFieldError("password") }}
+    </mat-error>
+  </mat-form-field>
+</form>
+  <div class="checkbox mb-3">
+      <mat-checkbox type="checkbox" value="remember-me">Acepto los terminos y condiciones. </mat-checkbox>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" (click)="RegistrarUsuario()" class="btn btn-primary">Registrarse</button>
+  </div>
+  <mat-progress-bar style="margin-top: 20px;" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
