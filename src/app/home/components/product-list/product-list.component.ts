@@ -43,7 +43,28 @@ export class ProductListComponent implements OnInit {
       descripcion: "Tablet de gama alta con chip M1, pantalla Liquid Retina de 10.9 pulgadas, cámara trasera de 12MP y batería de hasta 10 horas.",
       tipoDeDispositivo: "Tablet",
       precio: "6.500.000"
-    }
+    },
+    {
+      foto: "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/12905764-0947-4b07-96c8-2239ff5fa2b8.b2fdd9950babef43a03e756b96cd5d0a.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+      nombre: "Motorola Edge 40 Pro",
+      descripcion: "Smartphone Android de alta gama con pantalla OLED de 6.6 pulgadas, procesador Snapdragon 8 Gen 1, cámara cuádruple de 50MP y batería de 4500mAh.",
+      tipoDeDispositivo: "Celular",
+      precio: "3.499.900"
+    },
+    {
+      foto: "https://m.media-amazon.com/images/I/615rI0PoyOL.jpg",
+      nombre: "Google Pixel 7 Pro",
+      descripcion: "Smartphone Android de alta gama con pantalla OLED de 6.7 pulgadas, procesador Tensor 2, cámara triple de 50MP y batería de 5003mAh.",
+      tipoDeDispositivo: "Celular",
+      precio: "4.999.900"
+    },
+    {
+      foto: "https://i5.walmartimages.com/seo/Lenovo-ZA940188US-Tab-P11-Plus-11-128GB-Storage-4GB-RAM-Slate-Grey-WIFI-Tablet_1ea60d85-494f-4a4b-9653-b1ba93379509.fafab68cd72f98876b071c285c5515f5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+      nombre: "Lenovo Tab P11 Plus",
+      descripcion: "Tablet Android con pantalla 2K de 11.5 pulgadas, procesador MediaTek Kompanio 1300T, cámara trasera dual de 13MP y batería de 7700mAh.",
+      tipoDeDispositivo: "Tablet",
+      precio: "1.599.000"
+    }  
   ];
   
   constructor() { }

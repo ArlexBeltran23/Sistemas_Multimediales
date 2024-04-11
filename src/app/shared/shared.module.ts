@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import {MatBadgeModule } from '@angular/material/badge';
 @NgModule({
   declarations: [ToolbarComponent,
     SpinnerComponent],
@@ -13,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     RouterModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatBadgeModule
   ],
   exports: [
     ToolbarComponent,
