@@ -10,6 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
+import localeEsCo from '@angular/common/locales/es-CO';
+import { registerLocaleData } from '@angular/common';
+//registro pesos colombianos
+registerLocaleData(localeEsCo)
 @NgModule({
   declarations: [
     AppComponent

@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Productos</a>
+              <a class="nav-link active" aria-current="page" routerLink="/home">Productos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Ofertas</a>
@@ -27,8 +27,8 @@
           <button mat-icon-button class="btn-favorites">
             <mat-icon>favorite</mat-icon>
           </button>
-          <button mat-icon-button class="btn-shopping-cart" routerLink="carrito">
-            <mat-icon [matBadge]="productosCarrito" matBadgeSize="small"  matBadgeColor="warn">shopping_cart</mat-icon>
+          <button mat-icon-button class="btn-shopping-cart"  matBadge="1" matBadgeSize="small" routerLink="carrito">
+            <mat-icon matBadgeColor="warn">shopping_cart</mat-icon>
           </button>
         </div>
       </div>

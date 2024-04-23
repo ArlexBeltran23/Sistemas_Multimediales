@@ -1,10 +1,186 @@
-.card{
-    width: 380px;
-}
-img{
-    border-radius: 13%;
+
+  .btn-primary {
+    border-radius: 0;
+  }
+
+
+  /* Cards */
+  /* ==== Cards using Bootstrap === */
+
+  #cards{
+    margin-top: 10% !important;
+  }
+
+  .cantidad-producto{
+    width: 10% !important;
+  }
+  
+.columna-producto{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
 }
 
-.row{
-    margin-top: 14%;
+  #cards .card {
+    border-radius: 20px;
+    min-height: 100%;
+    max-height: 100%;
+    border: 1px solid red;
+    position: relative;
+    animation: changeColor 4s ease-in infinite;
+  }
+  
+  #cards .card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    animation: changeColorBorder 4s ease-in infinite;
+  }
+
+#cards .heading-border {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+}
+
+#cards .card .user-picture img {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  background: #f8f9fa!important;
+  padding: 10px;
+}
+
+#cards .card .user-content .user-name {
+  margin-right: 150px;
+  font-size: small;
+}
+
+
+/* Estilos boton cerrar modal */
+.mat-mdc-fab.mat-primary, .mat-mdc-mini-fab.mat-primary {
+  --mdc-fab-container-color: red;
+  --mdc-fab-icon-color: rgb(255, 255, 255);
+  --mat-mdc-fab-color: #fff;
+}
+
+.mdc-button__label{
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+.display-1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 10vw;
+    color: rgb(30, 45, 255);
+    animation: changeColor 4s ease-in infinite;
+  }
+  
+  em {
+    font-family: -webkit-pictograph;
+    font-weight: lighter;
+  }
+  
+  @keyframes changeColor {
+    0% { color: hwb(239 27% 3%); }
+    50% { color: rgb(250, 167, 73); }
+    100% { color: hwb(239 27% 3%); }
+  }
+
+    
+  @keyframes changeColorBorder {
+    0%, 100% { border-color: hwb(239 27% 3%) }
+    50% { border-color: #ff961e; }
+  }
+  
+/* ESTILOS BOTONES */
+
+  /* Estilos boton 9 */
+  
+  .boton-eliminar-del-carrito {
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ff0000 0%, #ff0000 74%);
+    border: none;
+    --bs-btn-hover-color: #ff0000 !important;
+    --bs-btn-color: white;
+  }
+  .boton-eliminar-del-carrito span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .boton-eliminar-del-carrito:before,
+  .boton-eliminar-del-carrito:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #ff0000;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+  }
+  .boton-eliminar-del-carrito:before{
+     height: 0%;
+     width: 2px;
+  }
+  .boton-eliminar-del-carrito:after {
+    width: 0%;
+    height: 2px;
+  }
+  .boton-eliminar-del-carrito:hover:before {
+    height: 100%;
+  }
+  .boton-eliminar-del-carrito:hover:after {
+    width: 100%;
+  }
+  .boton-eliminar-del-carrito:hover{
+    background: transparent;
+  }
+  .boton-eliminar-del-carrito span:hover{
+    color: #ff0000;
+  }
+  .boton-eliminar-del-carrito span:before,
+  .boton-eliminar-del-carrito span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #ff0000;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+  }
+  .boton-eliminar-del-carrito span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .boton-eliminar-del-carrito span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .boton-eliminar-del-carrito span:hover:before {
+    height: 100%;
+  }
+  .boton-eliminar-del-carrito span:hover:after {
+    width: 100%;
+  }
+
+
+  /* Estilos Tabla productos en el carrito */
+.content-table{
+    min-height: 45vh;
+    max-height: 45vh;
+    overflow: auto !important;
 }

@@ -1,6 +1,7 @@
 <section id="cards">
   <div class="container py-2">
-<button mat-mini-fab color="primary" style="position: absolute; right: 2vh; top: 2vh; z-index: 2;" mat-dialog-close><span style="color: white !important;">X</span></button>
+    <button mat-mini-fab color="primary" style="position: absolute; right: 2vh; top: 2vh; z-index: 2;"
+      mat-dialog-close><span style="color: white !important;">X</span></button>
     <div class="row pb-4">
       <div class="col-12 text-center">
         <div class="display-1" style="font-size: x-large;">Conoce Nuestros Productos</div>
@@ -8,26 +9,27 @@
     </div>
     <!-- cards -->
     <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4 pt-5"*ngFor="let product of products ">
+      <div class="col-lg-4 col-md-6 mb-4 pt-5" *ngFor="let product of products ">
         <div class="card shadow-sm border-0">
           <div class="card-body">
             <div class="user-picture">
-              <img
-                src={{product.foto}}
-                class="shadow-sm rounded-circle" height="100" width="100" />
+              <img src={{product.foto}} class="shadow-sm rounded-circle" height="100" width="100" />
             </div>
             <div class="user-content">
               <h5 class="text-capitalize user-name">{{product.nombre}}</h5>
               <br>
               <p class=" text-capitalize text-muted small blockquote-footer">{{product.tipoDeDispositivo}}</p>
               <p class="small text-muted mb-0">{{product.descripcion}}</p><br>
-              <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-md-4">
-                  <p class="small text-muted mb-0">{{product.precio}}</p>
-                </div>
-                <div class="col-md-8">
-                  <button mat-raised-button color="primary">Añadir al carrito <mat-icon>add_shopping_cart</mat-icon></button>
-                </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-md-4">
+                <p class="small text-muted mb-0">{{product.precio | currency : 'COP'}}</p>
+              </div>
+              <div class="col-md-8 d-flex justify-content-end">
+                <button mat-raised-button color="primary" style="color: white !important;" (click)="sendProductCartToService(product)">Añadir al carrito
+                  <mat-icon style="color: white !important;">add_shopping_cart</mat-icon></button>
               </div>
             </div>
           </div>

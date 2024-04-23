@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
-  public productosCarrito = "10"
+  public productosCarrito = "1"
   constructor() { }
 
   ngOnInit() {

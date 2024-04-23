@@ -95,3 +95,9 @@
     50% { border-color: rgb(255, 150, 30); }
   }
   
+/* Estilos footer de la card  */
+
+.card-footer{
+  background-color: #ffffff !important;
+  border-top: none !important;
+}

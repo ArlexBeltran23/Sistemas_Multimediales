@@ -1,8 +1,9 @@
 .navbar{
-    background-color: #d76c0f !important;
+    background-color: #ff961e !important;
 }
 
 .btn-shopping-cart, .btn-favorites{
     color: white;
 }
 
+.material-icons { font-family: 'Material Icons' !important; }

@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ProductDetail } from '../../interfaces/product.interface';
+import { ProductService } from '../../Services/product.service';
 
-export interface Transaction {
-  item: string;
-  cost: number;
-}
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
@@ -11,38 +9,23 @@ export interface Transaction {
 })
 
 export class ShoppingCartComponent implements OnInit {
+  public productService = inject(ProductService);
+  public productos: ProductDetail[] = []
 
-  constructor() { }
+  constructor() {
+    this.productos = this.productService.getProductCart();
+   }
+  
+  displayedColumns = ['NombreProducto', 'Precio', 'Acciones'];
 
-  displayedColumns = ['NombreProducto', 'Cantidad', 'Precio', 'Foto', 'Acciones'];
-  public productos = [
-    {
-        NombreProducto: "iPhone 13",
-        Cantidad: 50,
-        Precio: 2300000,
-        Foto: "iphone13.jpg",
-        Acciones: ["Ver detalles", "Agregar al carrito"]
-    },
-    {
-        NombreProducto: "Samsung Galaxy S21",
-        Cantidad: 30,
-        Precio: 1600000,
-        Foto: "galaxys21.jpg",
-        Acciones: ["Ver detalles", "Agregar al carrito"]
-    },
-    {
-        NombreProducto: "Google Pixel 6",
-        Cantidad: 20,
-        Precio: 2500000,
-        Foto: "pixel6.jpg",
-        Acciones: ["Ver detalles", "Agregar al carrito"]
-    }
-];
-
-
-  getTotalCost() {
-    return this.productos.map(t => t.Precio).reduce((acc, value) => acc + value, 0);
+  datasource = this.productos;
+  
+  deleteProductForCart(producto: ProductDetail){
+    this.productService.removeProductCart(producto);
   }
+  // getTotalCost() {
+  //   return this.productos.map(t => t.Precio).reduce((acc, value) => acc + value, 0);
+  // }
 
   ngOnInit() {
   }
