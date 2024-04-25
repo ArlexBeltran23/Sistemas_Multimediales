@@ -14,9 +14,12 @@ export class ProductService {
  }
   
   removeProductCart(producto: ProductDetail){
-    const index = this.productsCart.indexOf(producto);
-    this.productsCart.splice(index, 1);
-    console.log(this.productsCart);    
+    const index = this.productsCart.findIndex(product => product.id === producto.id);
+    if(index !== -1){
+      this.productsCart.splice(index, 1);
+      console.log(this.productsCart);    
+      this.getProductCart();
+    }
   }
 
   getProductCart(){

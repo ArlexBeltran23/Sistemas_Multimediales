@@ -27,8 +27,10 @@
           <button mat-icon-button class="btn-favorites">
             <mat-icon>favorite</mat-icon>
           </button>
-          <button mat-icon-button class="btn-shopping-cart"  matBadge="1" matBadgeSize="small" routerLink="carrito">
-            <mat-icon matBadgeColor="warn">shopping_cart</mat-icon>
+          <button mat-icon-button class="btn-shopping-cart"   routerLink="carrito">
+            <span matBadgeColor="warn" matBadgeSize="small" [matBadge]="productosCarrito">
+              <mat-icon>shopping_cart</mat-icon>
+            </span>
           </button>
         </div>
       </div>
