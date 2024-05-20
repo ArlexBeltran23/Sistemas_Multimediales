@@ -7,3 +7,7 @@
 }
 
 .material-icons { font-family: 'Material Icons' !important; }
+
+.mat-badge-active{
+    font-size: 12px !important;
+}
